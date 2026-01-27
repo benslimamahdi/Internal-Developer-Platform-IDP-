@@ -8,6 +8,7 @@ helmCharts:
     releaseName: kyverno
     namespace: kyverno
     valuesInline:
+      installCRDs: true
       admissionController:
         replicas: 1
 
