@@ -14,14 +14,10 @@ helmCharts:
         # For Production: Set tlsDisable: false and configure `tls` section with valid Certs.
         tlsDisable: true
       server:
-        dataStorage:
+        dev:
           enabled: true
-          size: 1Gi
-        # For a real production setup, we would use HA with Raft
-        # ha:
+        dataStorage:
+          enabled: false # Storage not needed in dev mode
+        # ui:
         #   enabled: true
-        #   raft:
-        #     enabled: true
-      ui:
-        enabled: true
-        serviceType: ClusterIP
+        #   serviceType: ClusterIP
