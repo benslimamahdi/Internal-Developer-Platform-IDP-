@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1beta2
+kind: Template
+metadata:
+  name: worker-service-go
+  title: Go Worker Service
+  description: A background worker service.
+  tags:
+    - go
+    - worker
+spec:
+  owner: platform-team
+  type: service
+  parameters:
+    - title: Service Details
+      required:
+        - name
+        - owner
+      properties:
+        name:
+          title: Name
+          type: string
+        owner:
+          title: Owner
+          type: string
+          ui:field: OwnerPicker
+  steps:
+    - id: log
+      name: Log
+      action: debug:log
+      input:
+        message: "Skeleton not implemented in this demo for Worker"
+  output:
+    links: []

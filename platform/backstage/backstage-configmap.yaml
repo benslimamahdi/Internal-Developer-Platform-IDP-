@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backstage-config
+  namespace: backstage
+data:
+  app-config.extra.yaml: |
+    app:
+      title: My Internal Developer Platform
+      baseUrl: http://localhost:7007
+
+    organization:
+      name: My Company
+
+    backend:
+      baseUrl: http://localhost:7007
+      cors:
+        origin: http://localhost:7007
+
+    catalog:
+      rules:
+        - allow: [Component, System, API, Resource, Location, Template]
+      locations:
+        # Load the catalog from the Github repo
+        - type: url
+          target: https://github.com/benslimamahdi/Internal-Developer-Platform-IDP-/blob/main/catalog-info.yaml

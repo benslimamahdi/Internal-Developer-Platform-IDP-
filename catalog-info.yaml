@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: idp-catalog
+  description: Collection of all IDP templates and resources
+spec:
+  targets:
+    - ./templates/backend-service/template.yaml
+    - ./templates/frontend-service/template.yaml
+    - ./templates/worker/template.yaml
