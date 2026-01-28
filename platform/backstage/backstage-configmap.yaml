@@ -9,6 +9,11 @@ data:
       title: My Internal Developer Platform
       baseUrl: http://localhost:7007
 
+    auth:
+      providers:
+        guest:
+          dangerouslyAllowGuestIdentityInDevelopment: true
+
     organization:
       name: My Company
 

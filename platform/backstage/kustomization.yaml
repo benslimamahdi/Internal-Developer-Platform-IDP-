@@ -4,6 +4,9 @@ kind: Kustomization
 resources:
   - backstage-configmap.yaml
 
+patches:
+  - path: deployment-patch.yaml
+
 helmCharts:
   - name: backstage
     repo: https://backstage.github.io/charts

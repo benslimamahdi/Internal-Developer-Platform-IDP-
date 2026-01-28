@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backstage
+  namespace: backstage
+spec:
+  template:
+    spec:
+      containers:
+        - name: backstage-backend
+          args:
+            - "--config"
+            - "app-config.yaml"
+            - "--config"
+            - "/config/app-config.extra.yaml"
+          volumeMounts:
+            - name: config
+              mountPath: /config
+      volumes:
+        - name: config
+          configMap:
+            name: backstage-config
