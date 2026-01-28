@@ -19,6 +19,14 @@ spec:
           - resources:
               kinds:
                 - Pod
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - argocd
+                - kyverno
+                - observability
+                - vault
       validate:
         message: "Privileged mode is not allowed. Set securityContext.privileged to false."
         pattern:
@@ -43,6 +51,14 @@ spec:
           - resources:
               kinds:
                 - Pod
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - argocd
+                - kyverno
+                - observability
+                - vault
       validate:
         message: "The label 'team' is required for cost tracking and ownership."
         pattern:
@@ -65,6 +81,14 @@ spec:
           - resources:
               kinds:
                 - Pod
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - argocd
+                - kyverno
+                - observability
+                - vault
       validate:
         message: "Images must come from allowed registries (docker.io, quay.io, gcr.io)."
         pattern:
