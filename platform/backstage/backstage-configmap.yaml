@@ -10,6 +10,7 @@ data:
       baseUrl: http://localhost:7007
 
     auth:
+      environment: development
       providers:
         guest:
           dangerouslyAllowSignInWithoutUserInCatalog: true
