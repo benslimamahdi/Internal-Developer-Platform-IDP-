@@ -12,7 +12,7 @@ data:
     auth:
       providers:
         guest:
-          dangerouslyAllowGuestIdentityInDevelopment: true
+          dangerouslyAllowSignInWithoutUserInCatalog: true
       allowGuest: true
 
     organization:
