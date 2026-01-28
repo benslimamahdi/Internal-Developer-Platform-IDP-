@@ -13,6 +13,7 @@ data:
       providers:
         guest:
           dangerouslyAllowGuestIdentityInDevelopment: true
+      allowGuest: true
 
     organization:
       name: My Company
