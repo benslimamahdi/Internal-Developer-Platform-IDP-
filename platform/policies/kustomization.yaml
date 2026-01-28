@@ -11,6 +11,7 @@ helmCharts:
       installCRDs: true
       admissionController:
         replicas: 1
+        containerPort: 9443
 
 resources:
   - policies.yaml
